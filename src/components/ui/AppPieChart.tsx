@@ -81,15 +81,18 @@ const AppPieChart = () => {
                       >
                         {totalVisitors.toLocaleString()}
                       </text>
-                      <text
-                        x={cx}
-                        y={cy + 20}
-                        textAnchor="middle"
-                        dominantBaseline="middle"
-                        className="fill-muted-foreground text-sm"
-                      >
-                        Visitors
-                      </text>
+                      {typeof cy === 'number' && (
+  <text
+    x={cx}
+    y={cy + 20}
+    textAnchor="middle"
+    dominantBaseline="middle"
+    className="fill-muted-foreground text-sm"
+  >
+    Visitors
+  </text>
+)}
+
                     </>
                   );
                 }
